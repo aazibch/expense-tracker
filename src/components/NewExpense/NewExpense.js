@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import ExpenseForm from './ExpenseForm';
-import './NewExpense.css';
+import ExpenseForm from './ExpenseForm/ExpenseForm';
+import FormContainer from '../UI/FormContainer/FormContainer';
 
 const NewExpense = (props) => {
     const [showExpenseForm, setShowExpenseForm] = useState(false);
@@ -25,7 +25,7 @@ const NewExpense = (props) => {
     };
 
     return (
-        <div className="new-expense">
+        <FormContainer>
             {showExpenseForm ? (
                 <ExpenseForm
                     cancelExpenseFormHandler={cancelExpenseFormHandler}
@@ -36,7 +36,7 @@ const NewExpense = (props) => {
                     Add New Expense
                 </button>
             )}
-        </div>
+        </FormContainer>
     );
 };
 

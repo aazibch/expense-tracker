@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
+import SetBudget from './components/Expenses/SetBudget/SetBudget';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const DUMMY_EXPENSES = [
@@ -29,8 +30,28 @@ const DUMMY_EXPENSES = [
     }
 ];
 
+const DUMMY_BUDGETS = [
+    {
+        year: '2019',
+        budget: 0
+    },
+    {
+        year: '2020',
+        budget: 12
+    },
+    {
+        year: '2021',
+        budget: 0
+    },
+    {
+        year: '2022',
+        budget: 0
+    }
+];
+
 function App() {
     const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+    const [budgets, setBudgets] = useState(DUMMY_BUDGETS);
 
     const addExpenseHandler = (expense) => {
         setExpenses((prevExpenses) => {
@@ -38,9 +59,22 @@ function App() {
         });
     };
 
+    const updateBudgetHandler = (budget) => {
+        setBudgets((prevBudgets) => {
+            return prevBudgets.map((b) => {
+                if (b.year === budget.year) {
+                    return budget;
+                }
+
+                return b;
+            });
+        });
+    };
+
     return (
         <div>
             <NewExpense onAddExpense={addExpenseHandler} />
+            <SetBudget onUpdateBudget={updateBudgetHandler} budgets={budgets} />
             <Expenses expenses={expenses} />
         </div>
     );
