@@ -1,4 +1,4 @@
-.expenses-budget {
+.expenses-detail {
     color: white;
     padding: 0 1rem;
     display: flex;
@@ -9,6 +9,6 @@
     font-weight: bold;
 }
 
-.expenses-budget__label {
+.expenses-detail__label {
     margin-bottom: 0.5rem;
 }

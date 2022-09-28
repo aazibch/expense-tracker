@@ -33,19 +33,19 @@ const DUMMY_EXPENSES = [
 const DUMMY_BUDGETS = [
     {
         year: '2019',
-        budget: 0
+        budget: 500
     },
     {
         year: '2020',
-        budget: 12
+        budget: 750
     },
     {
         year: '2021',
-        budget: 0
+        budget: 1000
     },
     {
         year: '2022',
-        budget: 0
+        budget: 1000
     }
 ];
 
