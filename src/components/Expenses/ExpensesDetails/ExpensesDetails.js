@@ -1,5 +1,5 @@
 import ExpensesDetail from './ExpensesDetail/ExpensesDetail';
-import ExpensesFilter from './ExpenseFilter/ExpenseFilter';
+import FilterByYearControl from './FilterByYearControl/FilterByYearControl';
 
 const ExpensesDetails = (props) => {
     let totalExpenses = 0;
@@ -13,9 +13,14 @@ const ExpensesDetails = (props) => {
 
     return (
         <>
-            <ExpensesFilter
-                value={props.filterYear}
-                onFilterYearChange={props.onFilterYearChange}
+            <ExpensesDetail
+                label="Filter by Year"
+                value={
+                    <FilterByYearControl
+                        value={props.filterYear}
+                        onChange={props.onFilterYearChange}
+                    />
+                }
             />
             <ExpensesDetail label="Budget" value={'$' + props.budget} />
             <ExpensesDetail label="Spent" value={'$' + totalExpenses} />

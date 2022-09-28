@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const BudgetForm = (props) => {
-    const [budgetYear, setBudgetYear] = useState('2020');
+    const [budgetYear, setBudgetYear] = useState('2019');
     const [budget, setBudget] = useState(0);
 
     useEffect(() => {
