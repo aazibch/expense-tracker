@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import BudgetForm from './BudgetForm/BudgetForm';
-import FormContainer from '../../UI/FormContainer/FormContainer';
+import FormContainer from '../UI/FormContainer/FormContainer';
 
 const SetBudget = (props) => {
     const [showBudgetForm, setShowBudgetForm] = useState(false);
