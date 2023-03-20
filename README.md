@@ -14,7 +14,7 @@ The demo can be found at https://expense-tracker-production.netlify.app/.
 
 ## Scripts
 
-Run in development server:
+Run the development server:
 
     npm start
 
